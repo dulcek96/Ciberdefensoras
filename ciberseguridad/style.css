@@ -1,0 +1,429 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Mono', monospace;
+  background: linear-gradient(to right, #1a0213, #192b9c, #4a0074, #531875, #192b9c, #1a0213); 
+  padding: 90px 20px 0;
+}
+
+.header {
+  background-color:black;
+  height: 90px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  max-width: 992px;
+  margin: 0 auto;
+
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 16px;
+  margin: 0 10px;
+  line-height: 80px;
+  text-transform: uppercase;
+  width: max-content;
+  padding-inline-start: 0.5rem ;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+  border-radius: 3px;
+}
+
+.nav-menu-link:hover,
+.nav-menu-link_active {
+  background-color: rgba(62, 144, 165, 0.226);
+  transition: 0.5s;
+}
+
+.nav-toggle {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 30px;
+  padding: 0 20px; /* Corregido: '20pz' a '20px' */
+  line-height: 60px;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+  .header {
+    background-color:black;
+    height: 60px;
+    
+  }
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #090909;
+    position: fixed;
+    left: 20px; 
+    top: 60px;
+    width: 100%;
+    padding: 20px 0;
+    height: calc(100% - 60px);
+    overflow-y: auto;
+    left: 100%;
+    transition: left 0.3s; 
+  }
+  .nav-menu-item {
+    position: relative;
+    line-height: 70px;
+  }
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background: none;
+    color: rgba(62, 144, 165, 0.226);
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-menu_visible {
+    left: 0;
+  }
+  .nav-toggle:focus:not(:focus-visible) {
+    outline: none;
+  }
+  .dropdown {
+    margin: 0 auto;
+  }
+  
+}
+.dropdown-toggle {
+  white-space: nowrap;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.dropdown-content {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: none;
+  position: absolute;
+  background-color: #f3f2f2;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow-y: auto;
+  max-height: 200px;
+  border-radius: 5px;
+  white-space: nowrap;
+
+}
+
+.dropdown-content a {
+  font-size: 9px;
+  display:inline-block; 
+  margin-bottom: 5px;
+  color: rgb(14, 11, 11);
+  padding: 12px 10px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.dropdown-content a:hover {background-color: #403e3e7d;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #050505;}
+
+.dropbtn {
+  background-color: #183560;
+  color: white;
+  padding: 1px 16px;
+  font-size: 2px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  
+}
+
+
+/* Estilos para el carrusel */
+#carouselExampleControls1 .carousel-inner img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover; /* Evita que las imágenes se deformen al ampliarlas */
+}
+
+#carouselExampleControls1 .carousel-item {
+  height: 32rem;
+  position: relative;
+}
+
+#carouselExampleControls1 .carousel-item img {
+  margin-right: 2rem;
+  opacity: 0.7;
+}
+
+#carouselExampleControls1 .carousel-caption {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 1rem;
+  border-radius: 10.25rem;
+}
+
+#carouselExampleControls1 .carousel-caption h1,
+#carouselExampleControls1 .carousel-caption h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10.5rem;
+}
+
+/* Estilos para los botones de control del carrusel */
+#carouselExampleControls1 .carousel-control-prev,
+#carouselExampleControls1 .carousel-control-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background: none;
+  border: none;
+  z-index: 1; /* Asegura que los botones estén sobre las imágenes */
+}
+
+#carouselExampleControls1 .carousel-control-prev-icon,
+#carouselExampleControls1 .carousel-control-next-icon {
+  width: 2rem; /* Ajusta el tamaño del ícono según tus necesidades */
+  height: 2rem;
+}
+
+#carouselExampleControls1 .carousel-control-prev {
+  left: 1rem;
+}
+
+#carouselExampleControls1 .carousel-control-next {
+  right: 1rem;
+}
+
+.carousel-container {
+  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
+  /* Otros estilos personalizados */
+}
+
+
+
+
+
+
+.titulo {
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  font-size: 3em; /* Ajusta el tamaño del texto según tus preferencias */
+  color: #ebe8eaad; /* Elige un color que complemente tu diseño */
+  text-transform: uppercase; /* Convierte el texto en mayúsculas */
+  letter-spacing: 2px; /* Añade un espaciado entre letras para mejorar la legibilidad */
+  margin-top: 30px; /* Agrega espacio superior para separar el título de otros elementos */
+  /* Puedes agregar más propiedades de estilo según tus preferencias */
+}
+
+
+section {
+  background: linear-gradient(to right, #29064175, #000000dd);
+  max-width:800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(125, 17, 5, 0.69);
+  
+} 
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  color: white;
+}
+
+a{
+  color: #fffffffb;
+  text-decoration: none;
+}
+
+
+
+.explore-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+p{
+  color:white;
+}
+
+
+h1, h2, h3 {
+  color: rgb(255, 106, 0);
+  text-shadow: 1px 1px 2px rgba(214, 118, 9, 0.8);
+}
+
+h4{
+  color: rgba(255, 106, 0, 0.442);
+}
+b{
+  color: white;
+}
+
+.testimonios {
+  padding: 40px 40px 80px 40px;
+  position: relative; /* Añadido */
+  z-index: 0; /* Ajustado */
+}
+
+/* Ajuste del z-index para que el carrusel esté debajo del encabezado */
+.testimonios .carousel {
+  max-width: 800px;
+  position: relative;
+  z-index: -1; /* Ajustado */
+}
+
+/* Estilos adicionales para el encabezado */
+header {
+  position: relative; /* Añadido */
+  z-index: 1; /* Ajustado */
+}
+
+.carousel-item {
+  height: 500px;
+}
+
+.carousel-item .container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonio-imagen {
+  height: 230px;
+  width: 220px;
+  margin: 10px 10px 20px 10px;
+}
+
+.testimonio-texto {
+  max-width: 70%;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.testimonio-info {
+  font-weight: bold;
+  text-align: center;
+}
+
+.testimonio-info p {
+  margin-bottom: 0;
+}
+
+.testimonio-footer .cliente {
+  font-size: 1.2rem;
+}
+
+.testimonio-info .cargo {
+  font-size: 0.9rem;
+  color: #656060;
+}
+
+
+/* Adaptable (Responsivo) */
+
+@media screen and (max-width: 400px) {
+  .overlay p {
+    font-size: 18px;
+  }
+
+  .overlay i {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .testimonio-imagen {
+    height: 120px;
+    width: 120px;
+  }
+
+  .testimonio-texto {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero-inferior-imagen {
+    max-width: 600px;
+  }
+}
+
+
+/* Estilos generales del footer */
+footer {
+  background-color: black; /* Cambia el color de fondo según tus preferencias */
+  color: #fff; /* Cambia el color del texto según tus preferencias */
+  padding: 20px; /* Añade espacio interno al footer */
+  text-align: center; /* Centra el contenido del footer */
+}
+
+/* Estilos para el logo */
+.footer-logo {
+  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Estilos para el texto */
+.footer-texto {
+  font-size: 14px; /* Tamaño de fuente del texto */
+  margin-bottom: 10px; /* Añade espacio entre el texto y el borde inferior */
+}
+
+/* Estilos para los derechos de autor */
+.derechos-de-autor {
+  font-size: 12px; /* Tamaño de fuente del texto de derechos de autor */
+  margin-top: 10px; /* Añade espacio entre el texto de derechos de autor y el contenido superior */
+}
