@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgb(41, 6, 65), rgb(0, 0, 0));
+    opacity: 0.25; /* Puedes ajustar la opacidad según lo necesites */
+    z-index: -1; /* Para asegurarte de que el pseudo-elemento esté detrás del contenido */
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    padding: 100px 20px 0;
+    background-image: url('imagenes/fondopantalla1.png'), linear-gradient(to right, rgb(147, 12, 236), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto hará que la imagen de fondo se mantenga fija mientras se desplaza el contenido */
+}
+
+
+  .header {
+    background-color: black;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  
+  .nav {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav-menu {
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+  }
+  
+  .nav-menu-item {
+    font-size: 18px;
+    margin: 0 0px;
+    line-height: 80px;
+    text-transform: uppercase;
+    width: max-content;
+  }
+  
+  .nav-menu-link {
+    padding: 8px 12px;
+    border-radius: 3px;
+  }
+  
+  .nav-menu-link:hover,
+  .nav-menu-link_active {
+    background-color: rgba(62, 144, 165, 0.226);
+    transition: 0.5s;
+  }
+  
+  .nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px; /* Corregido: '20pz' a '20px' */
+    line-height: 60px;
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      padding-top: 70px;
+    }
+    .header {
+      background-color: black;
+      height: 60px;
+    }
+    .nav-menu {
+      flex-direction: column;
+      align-items: center;
+      margin: 20px;
+      background-color: #090909;
+      position: fixed;
+      left: 20px; 
+      top: 60px;
+      width: 100%;
+      padding: 20px 0;
+      height: calc(100% - 60px);
+      overflow-y: auto;
+      left: 100%;
+      transition: left 0.3s; 
+    }
+    .nav-menu-item {
+      line-height: 70px;
+    }
+    .nav-menu-link:hover,
+    .nav-menu-link_active {
+      background: none;
+      color: rgba(62, 144, 165, 0.226);
+    }
+    .nav-toggle {
+      display: block;
+    }
+    .nav-menu_visible {
+      left: 0;
+    }
+    .nav-toggle:focus:not(:focus-visible) {
+      outline: none;
+    }
+    .dropdown {
+      margin: 0 auto;
+    }
+  }
+  
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: none;
+    position: absolute;
+    background-color: #f3f2f2;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    overflow-y: auto;
+    max-height: 200px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+.dropdown-content a {
+    font-size: 9px;
+    display:inline-block; 
+    margin-bottom: 5px;
+    color: rgb(14, 11, 11);
+    padding: 12px 10px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #403e3e7d;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #050505;}
+
+
+.dropbtn {
+    background-color: #601e18;
+    color: rgb(5, 5, 5);
+    padding: 1px 16px;
+    font-size: 2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+
+section {
+    background: linear-gradient(to right, #290641, #000000);
+    max-width:800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color:white
+
+}
+
+.explore-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+    
+    
+    
+h1, h3 {
+    font-family: 'Roboto Mono', monospace;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(214, 118, 9, 0.8);
+}
+
+p{
+    color: #14c91b;
+}
+
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+  color: black;
+}
+
+/* Estilos generales del footer */
+footer {
+  background-color: black; /* Cambia el color de fondo según tus preferencias */
+  color: #fff; /* Cambia el color del texto según tus preferencias */
+  padding: 20px; /* Añade espacio interno al footer */
+  text-align: center; /* Centra el contenido del footer */
+}
+
+/* Estilos para el logo */
+.footer-logo {
+  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+}
+
+/* Estilos para el texto */
+.footer-texto {
+  font-size: 14px; /* Tamaño de fuente del texto */
+  margin-bottom: 10px; 
+  color:white;/* Añade espacio entre el texto y el borde inferior */
+}
+
+/* Estilos para los derechos de autor */
+.derechos-de-autor {
+  font-size: 12px; /* Tamaño de fuente del texto de derechos de autor */
+  margin-top: 10px; /* Añade espacio entre el texto de derechos de autor y el contenido superior */
+}
