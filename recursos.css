@@ -48,7 +48,7 @@ iframe {
 
 /* Establecer un ancho máximo para las imágenes */
 img {
-  max-width: 50%;
+  max-width: 70%;
     height: 70%;
     display: block; /* Convertir la imagen en un bloque */
     margin: 0 auto; 

@@ -18,6 +18,7 @@ body {
   left: 0;
 }
 
+
 .nav {
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -184,7 +185,7 @@ body {
 
 #carouselExampleControls1 .carousel-item img {
   margin-right: 2rem;
-  opacity: 0.7;
+  
 }
 
 #carouselExampleControls1 .carousel-caption {

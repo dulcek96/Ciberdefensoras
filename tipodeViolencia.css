@@ -25,7 +25,7 @@ body::before {
 body {
   font-family: 'Roboto Mono', monospace;
   padding: 80px 20px 0;
-  background-image: url('imagenes/Sin título (9).png'), linear-gradient(to right, rgb(15, 2, 23), rgba(0, 0, 0, 0.5));
+  background-image: url('imagenes/ingenieria social (1).jpg'), linear-gradient(to right, rgb(15, 2, 23), rgba(0, 0, 0, 0.5));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
