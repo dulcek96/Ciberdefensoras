@@ -11,7 +11,7 @@ body {
 
 .header {
   background-color:black;
-  height: 90px;
+  height: 60px;
   position: fixed;
   width: 100%;
   top: 0;
@@ -22,7 +22,7 @@ body {
 .nav {
   flex-wrap: nowrap;
   justify-content: space-between;
-  max-width: 992px;
+  max-width: 1093px;
   margin: 0 auto;
 
 }
@@ -34,17 +34,23 @@ body {
 
 .nav-menu {
   display: flex;
-  margin-right: 40px;
+  margin-left: 5px;
   list-style: none;
 }
 
 .nav-menu-item {
   font-size: 16px;
-  margin: 0 10px;
-  line-height: 80px;
+  margin: 0 20px;
+  line-height: 50px;
   text-transform: uppercase;
   width: max-content;
   padding-inline-start: 0.5rem ;
+    display: none;
+}
+
+
+.nav-menu.nav-menu_visible .nav-menu-item {
+  display: block;
 }
 
 .nav-menu-link {
@@ -59,14 +65,38 @@ body {
 }
 
 .nav-toggle {
+  background-color: #000000;
   color: white;
-  background: none;
+  padding: 10px 15px; 
   border: none;
-  font-size: 30px;
-  padding: 0 20px; /* Corregido: '20pz' a '20px' */
-  line-height: 60px;
-  display: none;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  cursor: pointer; 
+  transition: background-color 0.3s;
+  right: 20px;
+  top: 15px;
 }
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: #525555; /* Color de fondo al pasar el mouse o enfocar */
+}
+
+
+
+.nav-menu_visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #090909;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  padding: 20px 0;
+}
+
 
 @media (max-width: 768px) {
   body {
@@ -115,144 +145,44 @@ body {
   }
   
 }
-.dropdown-toggle {
-  white-space: nowrap;
+
+
+.logo-container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  height: 100px; /* Ajusta según la necesidad */
+  flex-direction: column-reverse;
 }
 
-
-.dropdown {
-  position: relative;
-  display: inline-block;
+.logo-container img {
+  display:inline-table; /* Elimina cualquier espacio alrededor que tenga por defecto */
+  margin: 0 auto; /* Centra el elemento horizontalmente */
+  width: 150px; /* Ajusta el ancho del logo */
+  height: 150px; /* Mantiene la proporción del logo */ 
 }
 
-
-
-.dropdown-content {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  display: none;
-  position: absolute;
-  background-color: #f3f2f2;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  overflow-y: auto;
-  max-height: 200px;
-  border-radius: 5px;
-  white-space: nowrap;
-
+.logo-container {
+  text-align: center;
 }
-
-.dropdown-content a {
-  font-size: 9px;
-  display:inline-block; 
-  margin-bottom: 5px;
-  color: rgb(14, 11, 11);
-  padding: 12px 10px;
-  text-decoration: none;
-  display: block;
-  
-}
-
-.dropdown-content a:hover {background-color: #403e3e7d;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #050505;}
-
-.dropbtn {
-  background-color: #183560;
-  color: white;
-  padding: 1px 16px;
-  font-size: 2px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  
-}
-
-
-/* Estilos para el carrusel */
-#carouselExampleControls1 .carousel-inner img {
-  max-width: 100%;
-  height: auto;
-  object-fit: cover; /* Evita que las imágenes se deformen al ampliarlas */
-}
-
-#carouselExampleControls1 .carousel-item {
-  height: 32rem;
-  position: relative;
-}
-
-#carouselExampleControls1 .carousel-item img {
-  margin-right: 2rem;
-  
-}
-
-#carouselExampleControls1 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0);
-  padding: 1rem;
-  border-radius: 10.25rem;
-}
-
-#carouselExampleControls1 .carousel-caption h1,
-#carouselExampleControls1 .carousel-caption h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10.5rem;
-}
-
-/* Estilos para los botones de control del carrusel */
-#carouselExampleControls1 .carousel-control-prev,
-#carouselExampleControls1 .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: auto;
-  height: auto;
-  padding: 1rem;
-  background: none;
-  border: none;
-  z-index: 1; /* Asegura que los botones estén sobre las imágenes */
-}
-
-#carouselExampleControls1 .carousel-control-prev-icon,
-#carouselExampleControls1 .carousel-control-next-icon {
-  width: 2rem; /* Ajusta el tamaño del ícono según tus necesidades */
-  height: 2rem;
-}
-
-#carouselExampleControls1 .carousel-control-prev {
-  left: 1rem;
-}
-
-#carouselExampleControls1 .carousel-control-next {
-  right: 1rem;
-}
-
-.carousel-container {
-  margin-top: 100px; /* Ajusta el margen superior según sea necesario */
-  /* Otros estilos personalizados */
-}
-
-
-
 
 
 
 .titulo {
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  font-size: 3em; /* Ajusta el tamaño del texto según tus preferencias */
-  color: #ebe8eaad; /* Elige un color que complemente tu diseño */
-  text-transform: uppercase; /* Convierte el texto en mayúsculas */
-  letter-spacing: 2px; /* Añade un espaciado entre letras para mejorar la legibilidad */
-  margin-top: 30px; /* Agrega espacio superior para separar el título de otros elementos */
-  /* Puedes agregar más propiedades de estilo según tus preferencias */
+  font-size: 2.5em; /* Ajusta el tamaño del texto según tus preferencias */
+  color:#f1f0f2;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Alinea el texto al centro */
+  margin-bottom: 20px
 }
+
 
 
 section {
   background: linear-gradient(to right, #29064175, #000000dd);
-  max-width:800px;
+  max-width:900px;
+  max-height: 900px;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
@@ -289,6 +219,7 @@ a{
 
 p{
   color:white;
+  
 }
 
 
@@ -303,6 +234,7 @@ h4{
 b{
   color: white;
 }
+
 
 .testimonios {
   padding: 40px 40px 80px 40px;
@@ -323,10 +255,6 @@ header {
   z-index: 1; /* Ajustado */
 }
 
-.carousel-item {
-  height: 500px;
-}
-
 .carousel-item .container {
   width: 100%;
   height: 100%;
@@ -337,9 +265,9 @@ header {
 }
 
 .testimonio-imagen {
-  height: 230px;
-  width: 220px;
-  margin: 10px 10px 20px 10px;
+  height: 450px;
+  width: 450px;
+  margin: 10px 10px 10px 10px;
 }
 
 .testimonio-texto {
@@ -388,8 +316,8 @@ header {
 
 @media screen and (max-width: 800px) {
   .testimonio-imagen {
-    height: 120px;
-    width: 120px;
+    height: 250px;
+    width: 250px;
   }
 
   .testimonio-texto {
@@ -400,6 +328,68 @@ header {
 @media screen and (min-width: 700px) {
   .hero-inferior-imagen {
     max-width: 600px;
+  }
+}
+
+.contenedor-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+  padding: 20px; /* Reducido de 223px que parece excesivo */
+  align-items: stretch;
+}
+
+.tarjeta {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.imagen-tarjeta {
+  width: 50%; /* Cambiado de 50% para mejor adaptación */
+  height: 50%; /* Mantener la relación de aspecto, cambiado de 50% */
+  display: block;
+}
+
+.contenido, .detalle-oculto {
+  padding: 15px; /* Aumentado de 5px para mejor legibilidad */
+  text-align: center;
+}
+
+.detalle-oculto {
+  display: none;
+}
+
+.cliente, .cargo {
+  margin: 5px 0;
+}
+
+.linkedin-icon {
+  font-size: 1.5em;
+  color: #060707; /* Cambiado para el color típico de LinkedIn */
+}
+
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 600px) {
+  .contenedor-tarjetas {
+    grid-template-columns: 1fr; /* Solo una columna en pantallas pequeñas */
+    gap: 20px; /* Menor espacio entre tarjetas */
+    padding: 10px; /* Menos padding en el contenedor */
+  }
+
+  .imagen-tarjeta {
+    width: 30%; /* Asegurar que las imágenes se ajusten correctamente */
+  }
+
+  .contenido, .detalle-oculto {
+    padding: 10px; /* Padding adecuado para pantallas pequeñas */
+  }
+
+  .linkedin-icon {
+    font-size: 2em; /* Iconos un poco más grandes para facilidad de clic en pantallas táctiles */
   }
 }
 
@@ -414,13 +404,44 @@ footer {
 
 /* Estilos para el logo */
 .footer-logo {
-  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  width: 90px;
+  height: 90px;
+  margin: 10px; /* Ajusta el tamaño del logo según sea necesario */
 }
+
 
 /* Estilos para el texto */
 .footer-texto {
   font-size: 14px; /* Tamaño de fuente del texto */
   margin-bottom: 10px; /* Añade espacio entre el texto y el borde inferior */
+}
+
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+  color: black;
 }
 
 /* Estilos para los derechos de autor */

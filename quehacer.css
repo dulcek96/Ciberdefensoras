@@ -39,7 +39,7 @@ body {
   .nav {
     flex-wrap: nowrap;
     justify-content: space-between;
-    max-width: 992px;
+    max-width: 1093px;
     margin: 0 auto;
   }
   
@@ -50,16 +50,24 @@ body {
   
   .nav-menu {
     display: flex;
-    margin-right: 40px;
+    margin-right: 5px;
     list-style: none;
   }
   
   .nav-menu-item {
-    font-size: 18px;
-    margin: 0 0px;
-    line-height: 80px;
+    font-size: 16px;
+    margin: 0 20px;
+    line-height: 50px;
     text-transform: uppercase;
     width: max-content;
+    padding-inline-start: 0.5rem ;
+      display: none;
+  }
+  
+  
+
+  .nav-menu.nav-menu_visible .nav-menu-item {
+    display: block;
   }
   
   .nav-menu-link {
@@ -74,15 +82,42 @@ body {
   }
   
   .nav-toggle {
+    background-color: #000000;
     color: white;
-    background: none;
+    padding: 10px 15px; 
     border: none;
-    font-size: 30px;
-    padding: 0 20px; /* Corregido: '20pz' a '20px' */
-    line-height: 60px;
-    display: none;
+    border-radius: 5px;
+    display: block;
+    position: absolute;
+    cursor: pointer; 
+    transition: background-color 0.3s;
+    right: 20px;
+    top: 15px;
+  }
+
+  .nav-toggle:hover,
+  .nav-toggle:focus {
+    background-color: #525555; /* Color de fondo al pasar el mouse o enfocar */
   }
   
+
+  .nav-menu_visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #090909;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    padding: 20px 0;
+    
+  }
+  
+  a {
+    color:white;
+    text-decoration: none;
+    }
   @media (max-width: 768px) {
     body {
       padding-top: 70px;

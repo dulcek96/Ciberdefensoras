@@ -68,3 +68,14 @@ ddocument.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+
+function toggleMenu() {
+    var menu = document.getElementById('nav-menu');
+    if (menu.classList.contains('nav-menu_visible')) {
+      menu.classList.remove('nav-menu_visible');
+    } else {
+      menu.classList.add('nav-menu_visible');
+    }
+  }
+

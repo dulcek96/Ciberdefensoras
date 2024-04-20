@@ -33,19 +33,21 @@ body {
 }
 
 .header {
-  background-color: black;
-  height: 90px;
+  background-color:black;
+  height: 60px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
 }
 
+
 .nav {
   flex-wrap: nowrap;
   justify-content: space-between;
-  max-width: 992px;
+  max-width: 1093px;
   margin: 0 auto;
+
 }
 
 .nav-link {
@@ -55,16 +57,23 @@ body {
 
 .nav-menu {
   display: flex;
-  margin-right: 40px;
+  margin-left: 5px;
   list-style: none;
 }
 
 .nav-menu-item {
-  font-size: 18px;
-  margin: 0 0px;
-  line-height: 80px;
+  font-size: 16px;
+  margin: 0 20px;
+  line-height: 50px;
   text-transform: uppercase;
   width: max-content;
+  padding-inline-start: 0.5rem ;
+    display: none;
+}
+
+
+.nav-menu.nav-menu_visible .nav-menu-item {
+  display: block;
 }
 
 .nav-menu-link {
@@ -79,14 +88,38 @@ body {
 }
 
 .nav-toggle {
+  background-color: #000000;
   color: white;
-  background: none;
+  padding: 10px 15px; 
   border: none;
-  font-size: 30px;
-  padding: 0 20px; /* Corregido: '20pz' a '20px' */
-  line-height: 60px;
-  display: none;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  cursor: pointer; 
+  transition: background-color 0.3s;
+  right: 20px;
+  top: 15px;
 }
+
+.nav-toggle:hover,
+.nav-toggle:focus {
+  background-color: #525555; /* Color de fondo al pasar el mouse o enfocar */
+}
+
+
+
+.nav-menu_visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #090909;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  padding: 20px 0;
+}
+
 
 @media (max-width: 768px) {
   body {
@@ -314,16 +347,44 @@ footer {
 
 /* Estilos para el logo */
 .footer-logo {
-  width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  width: 90px;
+  height: 90px;
+  margin: 10px;  /* Ajusta el tamaño del logo según sea necesario */
 }
 
 /* Estilos para el texto */
 .footer-texto {
-  font-size: 14px; /* Tamaño de fuente del texto */
+  font-size: 14px;
   margin-bottom: 10px; 
-  color:white;/* Añade espacio entre el texto y el borde inferior */
+  color: #fff;
+}
+.iconos-redes-sociales a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+  transition: all 0.2s ease-in;
 }
 
+.iconos-redes-sociales i {
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.2s ease-in;
+}
+
+.iconos-redes-sociales a:hover {
+  background-color: white;
+  border: 2px solid rgb(13, 110, 253);
+}
+
+.iconos-redes-sociales a:hover i {
+  color: black;
+}
 /* Estilos para los derechos de autor */
 .derechos-de-autor {
   font-size: 12px; /* Tamaño de fuente del texto de derechos de autor */
