@@ -215,8 +215,12 @@ li {
 a{
   color: #fffffffb;
   text-decoration: none;
+
 }
 
+.info{
+  font-size: small;
+}
 
 
 .explore-button {
@@ -325,6 +329,7 @@ header {
 
 .testimonio-info p {
   margin-bottom: 0;
+  
 }
 
 .testimonio-footer .cliente {
@@ -336,15 +341,12 @@ header {
   color: #656060;
 }
 
-/* Estilos generales */
-body {
-    font-family: 'Roboto Mono', monospace; /* Usando la fuente Roboto Mono */
-}
+
 
 /* Estilos para la sección de testimonios */
 .testimonios {
   padding-top: 91px; /* Espacio en la parte superior */
-  padding-bottom: 500px; /* Espacio adicional en la parte inferior */
+  padding-bottom: 600px; /* Espacio adicional en la parte inferior */
   padding-left: 18px; /* Espacio a la izquierda */
   padding-right: 18px; /* Espacio a la derecha */
   position: relative;
@@ -389,7 +391,7 @@ body {
   }
 
   .testimonios {
-    padding: 7px;
+    padding: 1px;
     position: relative;
     z-index: 0;
 }
