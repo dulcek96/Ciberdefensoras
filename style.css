@@ -166,16 +166,27 @@ body {
 }
 
 
-
-.titulo {
+.titulo1{
   font-family: 'Roboto Mono', monospace;
   text-align: center;
-  font-size: 2.5em; /* Ajusta el tamaño del texto según tus preferencias */
+  font-size: 4vw;
   color:#f1f0f2;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Alinea el texto al centro */
-  margin-bottom: 20px
 }
+
+@media screen and (max-width: 768px) {
+  .titulo1 {
+    font-size: 5vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titulo1 {
+    font-size: 6vw;
+    
+  }
+}
+
+
 
 
 
@@ -236,11 +247,41 @@ b{
 }
 
 
-.testimonios {
-  padding: 40px 40px 80px 40px;
-  position: relative; /* Añadido */
-  z-index: 0; /* Ajustado */
+
+
+
+/* Estilos específicos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas, como tablets */
+  .testimonio-imagen {
+      max-width: 80%; /* La imagen ocupa el 80% del contenedor */
+  }
 }
+
+@media (max-width: 576px) {
+  /* Estilos para pantallas muy pequeñas, como smartphones */
+  .testimonio-imagen {
+      max-width: 100%; /* La imagen ocupa el 100% del contenedor */
+  }
+}
+
+
+.testimonios {
+  width: 100%; /* Ancho al 100% para ocupar todo el espacio disponible */
+  height: 100%; /* Altura de 500px (puedes ajustar este valor según sea necesario) */
+  padding: 40px 40px 80px 40px;
+  position: relative; 
+  z-index: 0; 
+}
+
+/* Estilos para la sección de testimonios en dispositivos móviles */
+@media (max-width: 768px) {
+  .testimonios {
+      height: 870px; 
+      width: auto;
+  }
+}
+
 
 /* Ajuste del z-index para que el carrusel esté debajo del encabezado */
 .testimonios .carousel {
@@ -256,7 +297,7 @@ header {
 }
 
 .carousel-item .container {
-  width: 100%;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -295,6 +336,32 @@ header {
   color: #656060;
 }
 
+/* Estilos generales */
+body {
+    font-family: 'Roboto Mono', monospace; /* Usando la fuente Roboto Mono */
+}
+
+/* Estilos para la sección de testimonios */
+.testimonios {
+  padding-top: 91px; /* Espacio en la parte superior */
+  padding-bottom: 500px; /* Espacio adicional en la parte inferior */
+  padding-left: 18px; /* Espacio a la izquierda */
+  padding-right: 18px; /* Espacio a la derecha */
+  position: relative;
+  z-index: 0;
+}
+
+/* Estilos para el carrusel */
+#testimonios-carrusel {
+    max-width: 100%;
+    position: relative;
+    z-index: 1; /* Ajustado para que esté por encima de otros elementos */
+}
+
+/* Estilos para las imágenes dentro del carrusel */
+
+/* Otros estilos necesarios para adaptar el contenido */
+
 
 /* Adaptable (Responsivo) */
 
@@ -323,11 +390,17 @@ header {
   .testimonio-texto {
     font-size: 18px;
   }
+
+  .testimonios {
+    padding: 22px;
+    position: relative;
+    z-index: 0;
+}
 }
 
 @media screen and (min-width: 700px) {
   .hero-inferior-imagen {
-    max-width: 600px;
+    max-width: 200px;
   }
 }
 
@@ -337,14 +410,15 @@ header {
   gap: 50px;
   padding: 20px; /* Reducido de 223px que parece excesivo */
   align-items: stretch;
+  margin-top: auto;
 }
 
 .tarjeta {
   cursor: pointer;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
   transition: all 0.3s ease;
 }
 
@@ -364,13 +438,39 @@ header {
 }
 
 .cliente, .cargo {
-  margin: 5px 0;
+  margin:max-content;
+  
 }
 
 .linkedin-icon {
   font-size: 1.5em;
   color: #060707; /* Cambiado para el color típico de LinkedIn */
 }
+
+
+/* Estilos generales para el texto dentro del contenedor */
+.testimonio-info {
+  word-wrap: break-word; /* Permite que las palabras se rompan para ajustarse al contenedor */
+  overflow: hidden; /* Oculta el texto que se desborda del contenedor */
+}
+
+/* Estilos específicos para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  /* Estilos para pantallas más pequeñas, como tablets */
+  .cliente {
+      white-space: normal; /* Permitir que el texto ocupe varias líneas si es necesario */
+  }
+}
+
+@media (max-width: 576px) {
+  /* Estilos para pantallas muy pequeñas, como smartphones */
+  .cliente {
+      white-space: nowrap; /* Forzar que el texto se muestre en una sola línea sin desbordarse */
+      overflow: hidden; /* Ocultar el texto que no quepa en una sola línea */
+      text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) cuando el texto se desborda */
+  }
+}
+
 
 /* Media Queries para pantallas más pequeñas */
 @media (max-width: 600px) {
