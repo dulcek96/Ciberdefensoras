@@ -449,7 +449,7 @@ header {
 
 .linkedin-icon {
   font-size: 1.5em;
-  color: #060707; /* Cambiado para el color típico de LinkedIn */
+  color: #B8C8EA; 
 }
 
 
@@ -511,7 +511,8 @@ header {
   }
 
   .linkedin-icon {
-    font-size: 2em; /* Iconos un poco más grandes para facilidad de clic en pantallas táctiles */
+    font-size: 2em; 
+    color:#B8C8EA;
   }
 }
 
