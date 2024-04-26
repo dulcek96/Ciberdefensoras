@@ -186,10 +186,6 @@ body {
   }
 }
 
-
-
-
-
 section {
   background: linear-gradient(to right, #29064175, #000000dd);
   max-width:900px;
@@ -417,7 +413,10 @@ header {
   overflow: visible;
   position: relative;
   border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0,0,0,0.1);*/
+  display: flex;
+  flex-direction: column;  /* Ajuste clave para apilar verticalmente la imagen y el texto */
+  align-items: center;     /* Alineación horizontal al centro */
+  justify-content: center; /* Alineación vertical al centro (si es necesario) */
   transition: all 0.3s ease;
 }
 
