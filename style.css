@@ -435,10 +435,17 @@ header {
   display: none;
 }
 
-.cliente, .cargo {
+.cliente {
   margin:max-content;
-  
+  color:#E3BBF2;
 }
+
+
+.cargo{
+  margin:max-content;
+}
+
+
 
 .linkedin-icon {
   font-size: 1.5em;
