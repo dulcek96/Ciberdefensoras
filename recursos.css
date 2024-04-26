@@ -49,11 +49,12 @@ iframe {
 /* Establecer un ancho máximo para las imágenes */
 img {
   max-width: 70%;
-    height: 70%;
+  height: auto;
     display: block; /* Convertir la imagen en un bloque */
     margin: 0 auto; 
-
 }
+
+
 
 
 .adolecentes {
