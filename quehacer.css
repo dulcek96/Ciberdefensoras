@@ -113,11 +113,34 @@ body {
     padding: 20px 0;
     
   }
-  
+  /* Estilos generales para los enlaces */
+a {
+  color: white;
+  text-decoration: none;
+}
+.seccion-oscura{
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 768px) {
   a {
-    color:white;
-    text-decoration: none;
-    }
+    color: blue; /* Cambiar el color del texto para pantallas pequeñas */
+    text-decoration: none; /* Añadir subrayado para pantallas pequeñas */
+  }
+}
+
+/* Estilos específicos para pantallas más grandes */
+@media only screen and (min-width: 1200px) {
+  a {
+    color: red; /* Cambiar el color del texto para pantallas grandes */
+    font-weight: bold; /* Añadir negrita para pantallas grandes */
+  }
+}
+
+
+
+    
   @media (max-width: 768px) {
     body {
       padding-top: 70px;
@@ -192,23 +215,6 @@ body {
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #403e3e7d;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #050505;}
-
-
-.dropbtn {
-    background-color: #601e18;
-    color: rgb(5, 5, 5);
-    padding: 1px 16px;
-    font-size: 2px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
 
 
 section {
