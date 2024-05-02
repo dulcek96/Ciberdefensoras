@@ -133,11 +133,23 @@ a {
 /* Estilos específicos para pantallas más grandes */
 @media only screen and (min-width: 1200px) {
   a {
-    color: red; /* Cambiar el color del texto para pantallas grandes */
+    color: rgb(248, 248, 248); /* Cambiar el color del texto para pantallas grandes */
     font-weight: bold; /* Añadir negrita para pantallas grandes */
   }
 }
 
+.enlace-externo {
+  color: #007bff; /* Color azul típico de los enlaces */
+  text-decoration: none; /* Evita el subrayado predeterminado */
+}
+
+.enlace-externo:hover {
+  text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+.enlace-externo:visited {
+  color: #08b7fc1f; /* Color para enlaces visitados */
+}
 
 
     
