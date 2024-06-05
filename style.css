@@ -401,7 +401,7 @@ header {
 
 .contenedor-tarjetas {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(700px, 1fr));
   gap: 50px;
   padding: 20px; /* Reducido de 223px que parece excesivo */
   align-items: stretch;
@@ -421,7 +421,7 @@ header {
 }
 
 .imagen-tarjeta {
-  width: 50%; /* Cambiado de 50% para mejor adaptación */
+  width: 30%; /* Cambiado de 50% para mejor adaptación */
   height: 50%; /* Mantener la relación de aspecto, cambiado de 50% */
   display: block;
 }
