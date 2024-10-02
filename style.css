@@ -420,9 +420,9 @@ header {
   transition: all 0.3s ease;
 }
 
-.imagen-tarjeta {
-  width: 30%; /* Cambiado de 50% para mejor adaptación */
-  height: 50%; /* Mantener la relación de aspecto, cambiado de 50% */
+.imagen-tarjeta { 
+  width: 18%;
+  height: 45%; /* Mantener la relación de aspecto, cambiado de 50% */
   display: block;
 }
 
